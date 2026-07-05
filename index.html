@@ -33,10 +33,9 @@ img{max-width:100%}
 
 /* ── NAVBAR ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,9,15,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;height:64px;display:flex;align-items:center;gap:2rem}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;height:76px;display:flex;align-items:center;gap:2rem}
 .nav-logo{display:flex;align-items:center;flex-shrink:0;gap:.6rem}
-.logo-x{width:30px;height:30px;flex-shrink:0;display:block}
-.logo-word{font-weight:800;letter-spacing:.02em;color:var(--white);font-size:1.05rem;white-space:nowrap}
+.logo-img{height:60px;width:auto;display:block;flex-shrink:0}
 .nav-links{display:flex;align-items:center;gap:0.25rem;margin-left:auto}
 .nav-links a{padding:0.45rem 0.9rem;border-radius:6px;font-size:0.875rem;color:var(--gray);transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--white);background:rgba(255,255,255,0.05)}
@@ -49,7 +48,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,9,15,0.92)
 .nav-cta{margin-left:1rem}
 
 /* ── LAYOUT ── */
-.page{display:none;padding-top:64px;min-height:100vh}
+.page{display:none;padding-top:76px;min-height:100vh}
 .page.active{display:block}
 .container{max-width:1280px;margin:0 auto;padding:0 2rem}
 section{padding:4rem 0}
@@ -82,7 +81,7 @@ h1,.section-title,.cta-banner h2{text-shadow:-1.5px 0 rgba(248,113,113,.4),1.5px
 
 /* ── SECTION LABELS ── */
 .label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue-light);margin-bottom:0.5rem}
-.section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.75rem}
+.section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:600;letter-spacing:-0.02em;margin-bottom:0.75rem}
 .section-sub{font-size:0.95rem;color:var(--gray);max-width:520px;margin-bottom:2.5rem}
 
 /* ── SERVICE CARDS GRID (HOME) ── */
@@ -125,7 +124,7 @@ h1,.section-title,.cta-banner h2{text-shadow:-1.5px 0 rgba(248,113,113,.4),1.5px
 .cta-banner{background:linear-gradient(135deg,#0c1a3a 0%,#0f1623 100%);border:1px solid rgba(37,99,235,0.2);border-radius:16px;padding:3rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;position:relative;overflow:hidden;margin:2rem 0}
 .cta-banner::after{content:'';position:absolute;right:8%;top:50%;transform:translateY(-50%);width:160px;height:160px;border-radius:50%;border:1px solid rgba(37,99,235,0.15);box-shadow:0 0 0 30px rgba(37,99,235,0.06),0 0 0 60px rgba(37,99,235,0.03)}
 .cta-icon{position:absolute;right:calc(8% + 52px);top:50%;transform:translateY(-50%);width:56px;height:56px;background:rgba(37,99,235,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;z-index:1}
-.cta-banner h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;max-width:420px}
+.cta-banner h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:600;max-width:420px}
 .cta-banner p{font-size:0.9rem;color:var(--gray);margin-top:0.4rem}
 
 /* ── FOOTER ── */
@@ -133,8 +132,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
 .footer-brand p{font-size:0.82rem;color:var(--gray);margin-top:0.75rem;max-width:240px;line-height:1.7}
 .footer-logo{display:flex;align-items:center;gap:.5rem}
-.footer-logo .logo-x{width:26px;height:26px}
-.footer-logo .logo-word{font-size:.95rem}
+.footer-logo .logo-img{height:52px}
 .social-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:6px;background:rgba(255,255,255,0.06);border:1px solid var(--border);margin-top:1rem;transition:background .2s}
 .social-btn:hover{background:rgba(37,99,235,0.2)}
 .social-btn svg{width:16px;height:16px;fill:var(--gray)}
@@ -157,7 +155,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
 .breadcrumb span{color:var(--white);font-weight:600}
 .breadcrumb::after{display:none}
 .breadcrumb-sep{color:var(--muted)}
-.page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.02em}
+.page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:-0.02em}
 .page-hero p{font-size:0.95rem;color:var(--gray);max-width:540px;margin:0.75rem auto 0;text-align:center}
 .page-hero-center{text-align:center}
 
@@ -315,21 +313,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
 <nav>
   <div class="nav-inner">
     <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer">
-      <svg class="logo-x" viewBox="0 0 48 48" aria-hidden="true">
-        <defs>
-          <linearGradient id="logoGradA" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#22d3ee"/>
-            <stop offset="1" stop-color="#2563eb"/>
-          </linearGradient>
-          <linearGradient id="logoGradB" x1="1" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#3b82f6"/>
-            <stop offset="1" stop-color="#1e3a8a"/>
-          </linearGradient>
-        </defs>
-        <path d="M6 6H17L42 42H31Z" fill="url(#logoGradA)"/>
-        <path d="M31 6H42L17 42H6Z" fill="url(#logoGradB)"/>
-      </svg>
-      <span class="logo-word">OPTIMEXA</span>
+      <img class="logo-img" src="imagenes/logo_optimexa.jpeg" alt="OPTIMEXA">
     </div>
     <div class="nav-links">
       <a href="javascript:void(0)" onclick="showPage('servicios');return false" id="nav-servicios">Servicios</a>
@@ -533,21 +517,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <svg class="logo-x" viewBox="0 0 48 48" aria-hidden="true">
-              <defs>
-                <linearGradient id="logoGradA" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#2563eb"/>
-                </linearGradient>
-                <linearGradient id="logoGradB" x1="1" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#3b82f6"/>
-                  <stop offset="1" stop-color="#1e3a8a"/>
-                </linearGradient>
-              </defs>
-              <path d="M6 6H17L42 42H31Z" fill="url(#logoGradA)"/>
-              <path d="M31 6H42L17 42H6Z" fill="url(#logoGradB)"/>
-            </svg>
-            <span class="logo-word">OPTIMEXA</span>
+            <img class="logo-img" src="imagenes/logo_optimexa.jpeg" alt="OPTIMEXA">
           </div>
           <p>Transformamos empresas con tecnología de vanguardia. Software, automatización e inteligencia artificial para el Perú y Latinoamérica.</p>
           <a href="#" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -756,21 +726,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <svg class="logo-x" viewBox="0 0 48 48" aria-hidden="true">
-              <defs>
-                <linearGradient id="logoGradA" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#2563eb"/>
-                </linearGradient>
-                <linearGradient id="logoGradB" x1="1" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#3b82f6"/>
-                  <stop offset="1" stop-color="#1e3a8a"/>
-                </linearGradient>
-              </defs>
-              <path d="M6 6H17L42 42H31Z" fill="url(#logoGradA)"/>
-              <path d="M31 6H42L17 42H6Z" fill="url(#logoGradB)"/>
-            </svg>
-            <span class="logo-word">OPTIMEXA</span>
+            <img class="logo-img" src="imagenes/logo_optimexa.jpeg" alt="OPTIMEXA">
           </div>
           <p>Transformamos empresas con tecnología de vanguardia. Software, automatización e inteligencia artificial para el Perú y Latinoamérica.</p>
           <a href="#" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -939,21 +895,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <svg class="logo-x" viewBox="0 0 48 48" aria-hidden="true">
-              <defs>
-                <linearGradient id="logoGradA" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#2563eb"/>
-                </linearGradient>
-                <linearGradient id="logoGradB" x1="1" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#3b82f6"/>
-                  <stop offset="1" stop-color="#1e3a8a"/>
-                </linearGradient>
-              </defs>
-              <path d="M6 6H17L42 42H31Z" fill="url(#logoGradA)"/>
-              <path d="M31 6H42L17 42H6Z" fill="url(#logoGradB)"/>
-            </svg>
-            <span class="logo-word">OPTIMEXA</span>
+            <img class="logo-img" src="imagenes/logo_optimexa.jpeg" alt="OPTIMEXA">
           </div>
           <p>Transformamos empresas con tecnología de vanguardia. Software, automatización e inteligencia artificial para el Perú y Latinoamérica.</p>
           <a href="#" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -1226,21 +1168,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <svg class="logo-x" viewBox="0 0 48 48" aria-hidden="true">
-              <defs>
-                <linearGradient id="logoGradA" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#2563eb"/>
-                </linearGradient>
-                <linearGradient id="logoGradB" x1="1" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#3b82f6"/>
-                  <stop offset="1" stop-color="#1e3a8a"/>
-                </linearGradient>
-              </defs>
-              <path d="M6 6H17L42 42H31Z" fill="url(#logoGradA)"/>
-              <path d="M31 6H42L17 42H6Z" fill="url(#logoGradB)"/>
-            </svg>
-            <span class="logo-word">OPTIMEXA</span>
+            <img class="logo-img" src="imagenes/logo_optimexa.jpeg" alt="OPTIMEXA">
           </div>
           <p>Transformamos empresas con tecnología de vanguardia. Software, automatización e inteligencia artificial para el Perú y Latinoamérica.</p>
           <a href="#" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -1364,21 +1292,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <svg class="logo-x" viewBox="0 0 48 48" aria-hidden="true">
-              <defs>
-                <linearGradient id="logoGradA" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#2563eb"/>
-                </linearGradient>
-                <linearGradient id="logoGradB" x1="1" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#3b82f6"/>
-                  <stop offset="1" stop-color="#1e3a8a"/>
-                </linearGradient>
-              </defs>
-              <path d="M6 6H17L42 42H31Z" fill="url(#logoGradA)"/>
-              <path d="M31 6H42L17 42H6Z" fill="url(#logoGradB)"/>
-            </svg>
-            <span class="logo-word">OPTIMEXA</span>
+            <img class="logo-img" src="imagenes/logo_optimexa.jpeg" alt="OPTIMEXA">
           </div>
           <p>Transformamos empresas con tecnología de vanguardia. Software, automatización e inteligencia artificial para el Perú y Latinoamérica.</p>
           <a href="#" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -1516,21 +1430,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 0 1
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <svg class="logo-x" viewBox="0 0 48 48" aria-hidden="true">
-              <defs>
-                <linearGradient id="logoGradA" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#22d3ee"/>
-                  <stop offset="1" stop-color="#2563eb"/>
-                </linearGradient>
-                <linearGradient id="logoGradB" x1="1" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#3b82f6"/>
-                  <stop offset="1" stop-color="#1e3a8a"/>
-                </linearGradient>
-              </defs>
-              <path d="M6 6H17L42 42H31Z" fill="url(#logoGradA)"/>
-              <path d="M31 6H42L17 42H6Z" fill="url(#logoGradB)"/>
-            </svg>
-            <span class="logo-word">OPTIMEXA</span>
+            <img class="logo-img" src="imagenes/logo_optimexa.jpeg" alt="OPTIMEXA">
           </div>
           <p>Transformamos empresas con tecnología de vanguardia. Software, automatización e inteligencia artificial para el Perú y Latinoamérica.</p>
           <a href="#" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
